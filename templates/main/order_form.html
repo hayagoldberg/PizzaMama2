@@ -1,0 +1,45 @@
+
+<!DOCTYPE html>
+{% load static %}
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> Order Pizza </title>
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+
+</head>
+<body class="order-page">
+
+    <header>
+        <a href="{% url 'main:menu' %}"> <img src="{% static 'small_logo.png' %}" alt="Logo" id="logo_image" /></a>
+    </header>
+
+    <div id="main_title">
+        <h1> Place Your Order </h1>
+    </div>
+    <form class="site-form" action="{% url 'main:order' %}" method="post">
+          {% csrf_token %}
+         <div class="pizza_list">
+            {% for pizza in pizzas %}
+            <div class="menu_element">
+                <span class="menu_item_name"> {{pizza.name}} </span>
+                <span class="menu_item_price"> {{pizza.price | floatformat:2}} $</span>
+                <div>
+                    <span class="menu_item_ingredients"> {{pizza.ingredients}} </span>
+            {% endfor %}
+         </div>
+            <div>
+            {{ form.customer_name.label_tag }} {{ form.customer_name }}
+        </div>
+        <div>
+            {{ form.customer_address.label_tag }} {{ form.customer_address }}
+        </div>
+        <div>
+            {{ form.customer_phone.label_tag }} {{ form.customer_phone }}
+        </div>
+            <input type="submit" value="Order">
+    </form>
+
+</body>
+</html>

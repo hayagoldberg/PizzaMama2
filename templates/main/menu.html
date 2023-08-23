@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+{% load static %}
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> Menu </title>
+    <link rel="stylesheet" href= "{% static 'styles.css' %}">
+
+</head>
+    <body class="menu-page">
+    <a href="{% url 'main:index' %}"> <img src="{% static 'small_logo.png' %}" alt="Logo" id="logo_image" /></a>
+
+    <div id="main_title">
+        <h1> Our pizzas </h1>
+    </div>
+
+    <a href="{% url 'main:order' %}"> Make an order </a>
+
+    <div class="pizza_list">
+        {% for pizza in pizzas %}
+        <div class="menu_element">
+            <span class="menu_item_name"> {{pizza.name}} </span> <span class="menu_item_price"> {{pizza.price | floatformat:2}} $</span>
+            <div>
+                <span class="menu_item_ingredients"> {{pizza.ingredients}} </span>
+                <div>
+                    {% if pizza.vegetarian %}
+                    <span class="veggi-badge">  VEGETARIAN  </span>
+                    {%endif%}
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+
+</body>
+</html>

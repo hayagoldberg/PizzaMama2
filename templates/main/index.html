@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+{% load static %}
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> Index </title>
+    <link rel="stylesheet" href= "{% static 'styles.css' %}">
+
+</head>
+<body class="index-page">
+    <div class="centered">
+        <img src="{% static 'main_logo.png' %}" alt="Logo" id="index-logo_image" />
+        <a href="{% url 'main:menu' %}"> Open the menu </a>
+    </div>
+</body>
+</html>

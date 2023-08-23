@@ -1,0 +1,119 @@
+/* general */
+
+li {
+    color: red;
+}
+
+
+h1 {
+    background-color: #DD7835;
+    display: inline;
+    padding: 8px 22px;
+}
+
+a{
+    color: #C8C8C8;
+}
+
+#logo_image {
+    margin-top: 25px;
+    margin-left: 35px;
+}
+
+#main_title {
+    margin-top: 45px;
+    margin-bottom: 50px;
+}
+.menu_element{
+    margin-top: 45px;
+    margin-bottom: 45px;
+    width: 320px;
+}
+
+.menu_list {
+    margin-left: 50px;
+}
+
+.menu_item_name{
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.menu_item_price{
+    font-size: 18px;
+    margin-left: 8px;
+    color: #DD7835;
+}
+
+.menu_item_ingredients{
+    font-size: 14px;
+    color: #C8C8C8;
+}
+
+.veggi-badge{
+    background: #DD7835;
+    font-size: 9px;
+    color: black;
+    font-weight: bold;
+    padding: 4px 8px;
+    margin-top: 4px;
+    border-radius: 4px;
+    display: inline-block;
+}
+
+
+/* index page */
+
+body.index-page{
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("main_background.jpg") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    color: white;
+    margin: 0px;
+    font-family: Arial;
+}
+
+.centered{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+body.index-page a{
+    display: block;
+    text-align: center;
+    color: #C8C8C8;
+    margin-top: 30px;
+    font-size: 18px;
+}
+
+
+/* menu page */
+
+body.menu-page {
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("menu_background.jpg") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    color: white;
+    margin: 0px;
+    font-family: Arial;
+}
+
+/* order page */
+
+body.order-page {
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)), url("Pizza-3007395.jpg") no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    color: white;
+    margin: 0px;
+    font-family: Arial;
+}
+
